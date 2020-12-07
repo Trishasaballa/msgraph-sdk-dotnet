@@ -9,29 +9,28 @@
 
 namespace Microsoft.Graph
 {
-    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     using System.IO;
-    using System.Runtime.Serialization;
+    using System.Text.Json.Serialization;
 
     /// <summary>
     /// The type WorkbookFunctionsTrimMeanRequestBody.
     /// </summary>
-    [JsonObject(MemberSerialization = MemberSerialization.OptIn)]
+    
     public partial class WorkbookFunctionsTrimMeanRequestBody
     {
     
         /// <summary>
         /// Gets or sets Array.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "array", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("array")]
         public Newtonsoft.Json.Linq.JToken Array { get; set; }
     
         /// <summary>
         /// Gets or sets Percent.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "percent", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("percent")]
         public Newtonsoft.Json.Linq.JToken Percent { get; set; }
     
     }

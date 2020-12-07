@@ -12,13 +12,12 @@ namespace Microsoft.Graph
     using System;
     using System.Collections.Generic;
     using System.IO;
-    using System.Runtime.Serialization;
-    using Newtonsoft.Json;
+    using System.Text.Json.Serialization;
 
     /// <summary>
     /// The type Delegated Permission Classification.
     /// </summary>
-    [JsonObject(MemberSerialization = MemberSerialization.OptIn)]
+    
     public partial class DelegatedPermissionClassification : Entity
     {
     
@@ -33,19 +32,19 @@ namespace Microsoft.Graph
         /// <summary>
         /// Gets or sets classification.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "classification", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("classification")]
         public PermissionClassificationType? Classification { get; set; }
     
         /// <summary>
         /// Gets or sets permission id.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "permissionId", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("permissionId")]
         public string PermissionId { get; set; }
     
         /// <summary>
         /// Gets or sets permission name.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "permissionName", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("permissionName")]
         public string PermissionName { get; set; }
     
     }

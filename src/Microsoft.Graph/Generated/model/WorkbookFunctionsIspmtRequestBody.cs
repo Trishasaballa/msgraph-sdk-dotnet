@@ -9,41 +9,40 @@
 
 namespace Microsoft.Graph
 {
-    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     using System.IO;
-    using System.Runtime.Serialization;
+    using System.Text.Json.Serialization;
 
     /// <summary>
     /// The type WorkbookFunctionsIspmtRequestBody.
     /// </summary>
-    [JsonObject(MemberSerialization = MemberSerialization.OptIn)]
+    
     public partial class WorkbookFunctionsIspmtRequestBody
     {
     
         /// <summary>
         /// Gets or sets Rate.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "rate", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("rate")]
         public Newtonsoft.Json.Linq.JToken Rate { get; set; }
     
         /// <summary>
         /// Gets or sets Per.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "per", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("per")]
         public Newtonsoft.Json.Linq.JToken Per { get; set; }
     
         /// <summary>
         /// Gets or sets Nper.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "nper", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("nper")]
         public Newtonsoft.Json.Linq.JToken Nper { get; set; }
     
         /// <summary>
         /// Gets or sets Pv.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "pv", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("pv")]
         public Newtonsoft.Json.Linq.JToken Pv { get; set; }
     
     }

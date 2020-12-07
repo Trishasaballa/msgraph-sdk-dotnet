@@ -9,29 +9,28 @@
 
 namespace Microsoft.Graph
 {
-    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     using System.IO;
-    using System.Runtime.Serialization;
+    using System.Text.Json.Serialization;
 
     /// <summary>
     /// The type WorkbookFunctionsDollarDeRequestBody.
     /// </summary>
-    [JsonObject(MemberSerialization = MemberSerialization.OptIn)]
+    
     public partial class WorkbookFunctionsDollarDeRequestBody
     {
     
         /// <summary>
         /// Gets or sets FractionalDollar.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "fractionalDollar", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("fractionalDollar")]
         public Newtonsoft.Json.Linq.JToken FractionalDollar { get; set; }
     
         /// <summary>
         /// Gets or sets Fraction.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "fraction", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("fraction")]
         public Newtonsoft.Json.Linq.JToken Fraction { get; set; }
     
     }

@@ -9,35 +9,34 @@
 
 namespace Microsoft.Graph
 {
-    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     using System.IO;
-    using System.Runtime.Serialization;
+    using System.Text.Json.Serialization;
 
     /// <summary>
     /// The type WorkbookFunctionsComplexRequestBody.
     /// </summary>
-    [JsonObject(MemberSerialization = MemberSerialization.OptIn)]
+    
     public partial class WorkbookFunctionsComplexRequestBody
     {
     
         /// <summary>
         /// Gets or sets RealNum.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "realNum", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("realNum")]
         public Newtonsoft.Json.Linq.JToken RealNum { get; set; }
     
         /// <summary>
         /// Gets or sets INum.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "iNum", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("iNum")]
         public Newtonsoft.Json.Linq.JToken INum { get; set; }
     
         /// <summary>
         /// Gets or sets Suffix.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "suffix", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("suffix")]
         public Newtonsoft.Json.Linq.JToken Suffix { get; set; }
     
     }

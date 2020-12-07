@@ -9,53 +9,52 @@
 
 namespace Microsoft.Graph
 {
-    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     using System.IO;
-    using System.Runtime.Serialization;
+    using System.Text.Json.Serialization;
 
     /// <summary>
     /// The type WorkbookFunctionsPpmtRequestBody.
     /// </summary>
-    [JsonObject(MemberSerialization = MemberSerialization.OptIn)]
+    
     public partial class WorkbookFunctionsPpmtRequestBody
     {
     
         /// <summary>
         /// Gets or sets Rate.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "rate", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("rate")]
         public Newtonsoft.Json.Linq.JToken Rate { get; set; }
     
         /// <summary>
         /// Gets or sets Per.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "per", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("per")]
         public Newtonsoft.Json.Linq.JToken Per { get; set; }
     
         /// <summary>
         /// Gets or sets Nper.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "nper", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("nper")]
         public Newtonsoft.Json.Linq.JToken Nper { get; set; }
     
         /// <summary>
         /// Gets or sets Pv.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "pv", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("pv")]
         public Newtonsoft.Json.Linq.JToken Pv { get; set; }
     
         /// <summary>
         /// Gets or sets Fv.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "fv", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("fv")]
         public Newtonsoft.Json.Linq.JToken Fv { get; set; }
     
         /// <summary>
         /// Gets or sets Type.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "type", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("type")]
         public Newtonsoft.Json.Linq.JToken Type { get; set; }
     
     }

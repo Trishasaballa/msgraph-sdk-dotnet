@@ -9,41 +9,40 @@
 
 namespace Microsoft.Graph
 {
-    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     using System.IO;
-    using System.Runtime.Serialization;
+    using System.Text.Json.Serialization;
 
     /// <summary>
     /// The type WorkbookFunctionsSydRequestBody.
     /// </summary>
-    [JsonObject(MemberSerialization = MemberSerialization.OptIn)]
+    
     public partial class WorkbookFunctionsSydRequestBody
     {
     
         /// <summary>
         /// Gets or sets Cost.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "cost", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("cost")]
         public Newtonsoft.Json.Linq.JToken Cost { get; set; }
     
         /// <summary>
         /// Gets or sets Salvage.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "salvage", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("salvage")]
         public Newtonsoft.Json.Linq.JToken Salvage { get; set; }
     
         /// <summary>
         /// Gets or sets Life.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "life", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("life")]
         public Newtonsoft.Json.Linq.JToken Life { get; set; }
     
         /// <summary>
         /// Gets or sets Per.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "per", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("per")]
         public Newtonsoft.Json.Linq.JToken Per { get; set; }
     
     }

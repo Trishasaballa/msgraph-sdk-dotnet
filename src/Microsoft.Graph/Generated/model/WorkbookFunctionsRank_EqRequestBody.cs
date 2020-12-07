@@ -9,35 +9,34 @@
 
 namespace Microsoft.Graph
 {
-    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     using System.IO;
-    using System.Runtime.Serialization;
+    using System.Text.Json.Serialization;
 
     /// <summary>
     /// The type WorkbookFunctionsRank_EqRequestBody.
     /// </summary>
-    [JsonObject(MemberSerialization = MemberSerialization.OptIn)]
+    
     public partial class WorkbookFunctionsRank_EqRequestBody
     {
     
         /// <summary>
         /// Gets or sets Number.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "number", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("number")]
         public Newtonsoft.Json.Linq.JToken Number { get; set; }
     
         /// <summary>
         /// Gets or sets Ref.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "ref", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("ref")]
         public Newtonsoft.Json.Linq.JToken Ref { get; set; }
     
         /// <summary>
         /// Gets or sets Order.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "order", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("order")]
         public Newtonsoft.Json.Linq.JToken Order { get; set; }
     
     }

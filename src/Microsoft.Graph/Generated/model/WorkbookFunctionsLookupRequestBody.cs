@@ -9,35 +9,34 @@
 
 namespace Microsoft.Graph
 {
-    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     using System.IO;
-    using System.Runtime.Serialization;
+    using System.Text.Json.Serialization;
 
     /// <summary>
     /// The type WorkbookFunctionsLookupRequestBody.
     /// </summary>
-    [JsonObject(MemberSerialization = MemberSerialization.OptIn)]
+    
     public partial class WorkbookFunctionsLookupRequestBody
     {
     
         /// <summary>
         /// Gets or sets LookupValue.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "lookupValue", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("lookupValue")]
         public Newtonsoft.Json.Linq.JToken LookupValue { get; set; }
     
         /// <summary>
         /// Gets or sets LookupVector.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "lookupVector", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("lookupVector")]
         public Newtonsoft.Json.Linq.JToken LookupVector { get; set; }
     
         /// <summary>
         /// Gets or sets ResultVector.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "resultVector", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("resultVector")]
         public Newtonsoft.Json.Linq.JToken ResultVector { get; set; }
     
     }

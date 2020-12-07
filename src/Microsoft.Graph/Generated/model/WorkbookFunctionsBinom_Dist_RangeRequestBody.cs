@@ -9,41 +9,40 @@
 
 namespace Microsoft.Graph
 {
-    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     using System.IO;
-    using System.Runtime.Serialization;
+    using System.Text.Json.Serialization;
 
     /// <summary>
     /// The type WorkbookFunctionsBinom_Dist_RangeRequestBody.
     /// </summary>
-    [JsonObject(MemberSerialization = MemberSerialization.OptIn)]
+    
     public partial class WorkbookFunctionsBinom_Dist_RangeRequestBody
     {
     
         /// <summary>
         /// Gets or sets Trials.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "trials", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("trials")]
         public Newtonsoft.Json.Linq.JToken Trials { get; set; }
     
         /// <summary>
         /// Gets or sets ProbabilityS.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "probabilityS", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("probabilityS")]
         public Newtonsoft.Json.Linq.JToken ProbabilityS { get; set; }
     
         /// <summary>
         /// Gets or sets NumberS.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "numberS", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("numberS")]
         public Newtonsoft.Json.Linq.JToken NumberS { get; set; }
     
         /// <summary>
         /// Gets or sets NumberS2.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "numberS2", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("numberS2")]
         public Newtonsoft.Json.Linq.JToken NumberS2 { get; set; }
     
     }

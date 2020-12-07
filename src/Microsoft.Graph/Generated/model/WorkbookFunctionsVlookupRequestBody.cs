@@ -9,41 +9,40 @@
 
 namespace Microsoft.Graph
 {
-    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     using System.IO;
-    using System.Runtime.Serialization;
+    using System.Text.Json.Serialization;
 
     /// <summary>
     /// The type WorkbookFunctionsVlookupRequestBody.
     /// </summary>
-    [JsonObject(MemberSerialization = MemberSerialization.OptIn)]
+    
     public partial class WorkbookFunctionsVlookupRequestBody
     {
     
         /// <summary>
         /// Gets or sets LookupValue.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "lookupValue", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("lookupValue")]
         public Newtonsoft.Json.Linq.JToken LookupValue { get; set; }
     
         /// <summary>
         /// Gets or sets TableArray.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "tableArray", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("tableArray")]
         public Newtonsoft.Json.Linq.JToken TableArray { get; set; }
     
         /// <summary>
         /// Gets or sets ColIndexNum.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "colIndexNum", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("colIndexNum")]
         public Newtonsoft.Json.Linq.JToken ColIndexNum { get; set; }
     
         /// <summary>
         /// Gets or sets RangeLookup.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "rangeLookup", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("rangeLookup")]
         public Newtonsoft.Json.Linq.JToken RangeLookup { get; set; }
     
     }

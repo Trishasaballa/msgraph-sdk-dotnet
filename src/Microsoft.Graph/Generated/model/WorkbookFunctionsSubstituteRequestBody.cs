@@ -9,41 +9,40 @@
 
 namespace Microsoft.Graph
 {
-    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     using System.IO;
-    using System.Runtime.Serialization;
+    using System.Text.Json.Serialization;
 
     /// <summary>
     /// The type WorkbookFunctionsSubstituteRequestBody.
     /// </summary>
-    [JsonObject(MemberSerialization = MemberSerialization.OptIn)]
+    
     public partial class WorkbookFunctionsSubstituteRequestBody
     {
     
         /// <summary>
         /// Gets or sets Text.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "text", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("text")]
         public Newtonsoft.Json.Linq.JToken Text { get; set; }
     
         /// <summary>
         /// Gets or sets OldText.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "oldText", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("oldText")]
         public Newtonsoft.Json.Linq.JToken OldText { get; set; }
     
         /// <summary>
         /// Gets or sets NewText.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "newText", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("newText")]
         public Newtonsoft.Json.Linq.JToken NewText { get; set; }
     
         /// <summary>
         /// Gets or sets InstanceNum.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "instanceNum", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("instanceNum")]
         public Newtonsoft.Json.Linq.JToken InstanceNum { get; set; }
     
     }

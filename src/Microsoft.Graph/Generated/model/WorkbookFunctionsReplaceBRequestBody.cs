@@ -9,41 +9,40 @@
 
 namespace Microsoft.Graph
 {
-    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     using System.IO;
-    using System.Runtime.Serialization;
+    using System.Text.Json.Serialization;
 
     /// <summary>
     /// The type WorkbookFunctionsReplaceBRequestBody.
     /// </summary>
-    [JsonObject(MemberSerialization = MemberSerialization.OptIn)]
+    
     public partial class WorkbookFunctionsReplaceBRequestBody
     {
     
         /// <summary>
         /// Gets or sets OldText.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "oldText", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("oldText")]
         public Newtonsoft.Json.Linq.JToken OldText { get; set; }
     
         /// <summary>
         /// Gets or sets StartNum.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "startNum", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("startNum")]
         public Newtonsoft.Json.Linq.JToken StartNum { get; set; }
     
         /// <summary>
         /// Gets or sets NumBytes.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "numBytes", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("numBytes")]
         public Newtonsoft.Json.Linq.JToken NumBytes { get; set; }
     
         /// <summary>
         /// Gets or sets NewText.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "newText", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("newText")]
         public Newtonsoft.Json.Linq.JToken NewText { get; set; }
     
     }

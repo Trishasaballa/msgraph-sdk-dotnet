@@ -9,35 +9,34 @@
 
 namespace Microsoft.Graph
 {
-    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     using System.IO;
-    using System.Runtime.Serialization;
+    using System.Text.Json.Serialization;
 
     /// <summary>
     /// The type WorkbookFunctionsSumIfRequestBody.
     /// </summary>
-    [JsonObject(MemberSerialization = MemberSerialization.OptIn)]
+    
     public partial class WorkbookFunctionsSumIfRequestBody
     {
     
         /// <summary>
         /// Gets or sets Range.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "range", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("range")]
         public Newtonsoft.Json.Linq.JToken Range { get; set; }
     
         /// <summary>
         /// Gets or sets Criteria.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "criteria", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("criteria")]
         public Newtonsoft.Json.Linq.JToken Criteria { get; set; }
     
         /// <summary>
         /// Gets or sets SumRange.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "sumRange", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("sumRange")]
         public Newtonsoft.Json.Linq.JToken SumRange { get; set; }
     
     }

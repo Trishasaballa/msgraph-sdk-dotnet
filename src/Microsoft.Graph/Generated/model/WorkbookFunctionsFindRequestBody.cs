@@ -9,35 +9,34 @@
 
 namespace Microsoft.Graph
 {
-    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     using System.IO;
-    using System.Runtime.Serialization;
+    using System.Text.Json.Serialization;
 
     /// <summary>
     /// The type WorkbookFunctionsFindRequestBody.
     /// </summary>
-    [JsonObject(MemberSerialization = MemberSerialization.OptIn)]
+    
     public partial class WorkbookFunctionsFindRequestBody
     {
     
         /// <summary>
         /// Gets or sets FindText.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "findText", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("findText")]
         public Newtonsoft.Json.Linq.JToken FindText { get; set; }
     
         /// <summary>
         /// Gets or sets WithinText.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "withinText", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("withinText")]
         public Newtonsoft.Json.Linq.JToken WithinText { get; set; }
     
         /// <summary>
         /// Gets or sets StartNum.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "startNum", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("startNum")]
         public Newtonsoft.Json.Linq.JToken StartNum { get; set; }
     
     }

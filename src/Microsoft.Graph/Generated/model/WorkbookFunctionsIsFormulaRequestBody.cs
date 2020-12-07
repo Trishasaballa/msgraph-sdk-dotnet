@@ -9,23 +9,22 @@
 
 namespace Microsoft.Graph
 {
-    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     using System.IO;
-    using System.Runtime.Serialization;
+    using System.Text.Json.Serialization;
 
     /// <summary>
     /// The type WorkbookFunctionsIsFormulaRequestBody.
     /// </summary>
-    [JsonObject(MemberSerialization = MemberSerialization.OptIn)]
+    
     public partial class WorkbookFunctionsIsFormulaRequestBody
     {
     
         /// <summary>
         /// Gets or sets Reference.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "reference", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("reference")]
         public Newtonsoft.Json.Linq.JToken Reference { get; set; }
     
     }

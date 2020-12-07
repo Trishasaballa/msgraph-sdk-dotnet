@@ -9,23 +9,22 @@
 
 namespace Microsoft.Graph
 {
-    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     using System.IO;
-    using System.Runtime.Serialization;
+    using System.Text.Json.Serialization;
 
     /// <summary>
     /// The type WorkbookFunctionsFisherInvRequestBody.
     /// </summary>
-    [JsonObject(MemberSerialization = MemberSerialization.OptIn)]
+    
     public partial class WorkbookFunctionsFisherInvRequestBody
     {
     
         /// <summary>
         /// Gets or sets Y.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "y", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("y")]
         public Newtonsoft.Json.Linq.JToken Y { get; set; }
     
     }

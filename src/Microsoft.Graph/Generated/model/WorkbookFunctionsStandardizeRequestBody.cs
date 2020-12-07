@@ -9,35 +9,34 @@
 
 namespace Microsoft.Graph
 {
-    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     using System.IO;
-    using System.Runtime.Serialization;
+    using System.Text.Json.Serialization;
 
     /// <summary>
     /// The type WorkbookFunctionsStandardizeRequestBody.
     /// </summary>
-    [JsonObject(MemberSerialization = MemberSerialization.OptIn)]
+    
     public partial class WorkbookFunctionsStandardizeRequestBody
     {
     
         /// <summary>
         /// Gets or sets X.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "x", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("x")]
         public Newtonsoft.Json.Linq.JToken X { get; set; }
     
         /// <summary>
         /// Gets or sets Mean.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "mean", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("mean")]
         public Newtonsoft.Json.Linq.JToken Mean { get; set; }
     
         /// <summary>
         /// Gets or sets StandardDev.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "standardDev", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("standardDev")]
         public Newtonsoft.Json.Linq.JToken StandardDev { get; set; }
     
     }

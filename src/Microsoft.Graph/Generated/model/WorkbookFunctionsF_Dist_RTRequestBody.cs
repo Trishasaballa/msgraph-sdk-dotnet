@@ -9,35 +9,34 @@
 
 namespace Microsoft.Graph
 {
-    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     using System.IO;
-    using System.Runtime.Serialization;
+    using System.Text.Json.Serialization;
 
     /// <summary>
     /// The type WorkbookFunctionsF_Dist_RTRequestBody.
     /// </summary>
-    [JsonObject(MemberSerialization = MemberSerialization.OptIn)]
+    
     public partial class WorkbookFunctionsF_Dist_RTRequestBody
     {
     
         /// <summary>
         /// Gets or sets X.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "x", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("x")]
         public Newtonsoft.Json.Linq.JToken X { get; set; }
     
         /// <summary>
         /// Gets or sets DegFreedom1.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "degFreedom1", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("degFreedom1")]
         public Newtonsoft.Json.Linq.JToken DegFreedom1 { get; set; }
     
         /// <summary>
         /// Gets or sets DegFreedom2.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "degFreedom2", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("degFreedom2")]
         public Newtonsoft.Json.Linq.JToken DegFreedom2 { get; set; }
     
     }

@@ -9,29 +9,28 @@
 
 namespace Microsoft.Graph
 {
-    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     using System.IO;
-    using System.Runtime.Serialization;
+    using System.Text.Json.Serialization;
 
     /// <summary>
     /// The type WorkbookFunctionsImSubRequestBody.
     /// </summary>
-    [JsonObject(MemberSerialization = MemberSerialization.OptIn)]
+    
     public partial class WorkbookFunctionsImSubRequestBody
     {
     
         /// <summary>
         /// Gets or sets Inumber1.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "inumber1", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("inumber1")]
         public Newtonsoft.Json.Linq.JToken Inumber1 { get; set; }
     
         /// <summary>
         /// Gets or sets Inumber2.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "inumber2", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("inumber2")]
         public Newtonsoft.Json.Linq.JToken Inumber2 { get; set; }
     
     }

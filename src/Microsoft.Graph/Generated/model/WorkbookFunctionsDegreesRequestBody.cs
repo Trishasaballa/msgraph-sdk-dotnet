@@ -9,23 +9,22 @@
 
 namespace Microsoft.Graph
 {
-    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     using System.IO;
-    using System.Runtime.Serialization;
+    using System.Text.Json.Serialization;
 
     /// <summary>
     /// The type WorkbookFunctionsDegreesRequestBody.
     /// </summary>
-    [JsonObject(MemberSerialization = MemberSerialization.OptIn)]
+    
     public partial class WorkbookFunctionsDegreesRequestBody
     {
     
         /// <summary>
         /// Gets or sets Angle.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "angle", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("angle")]
         public Newtonsoft.Json.Linq.JToken Angle { get; set; }
     
     }
