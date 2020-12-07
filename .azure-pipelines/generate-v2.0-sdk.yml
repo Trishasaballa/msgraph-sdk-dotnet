@@ -6,10 +6,6 @@ name: $(BuildDefinitionName)_$(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)
 trigger: none # disable triggers based on commits.
 pr: none # disable triggers based on pull requests.
 
-variables:
-  typewriterSolution: 'MSGraph-SDK-Code-Generator/**/Typewriter.sln'
-  buildConfiguration: 'Release'
-
 resources:
   repositories:
   - repository: msgraph-sdk-dotnet # The name used to reference this repository in the checkout step
@@ -38,7 +34,8 @@ pool:
   vmImage: windows-latest # Info about this image: [0][1]
 
 variables:
-  - group: MicrosoftGraph # Variable group, where variables not set here come from. Set in Azure DevOps
+  typewriterSolution: 'MSGraph-SDK-Code-Generator/**/Typewriter.sln'
+  buildConfiguration: 'Release'
 
 steps:
 - checkout: msgraph-sdk-dotnet
