@@ -10,15 +10,20 @@
 
 namespace Microsoft.Graph
 {
-    using Newtonsoft.Json;
+    using System.Text.Json.Serialization;
 
     /// <summary>
     /// The enum FreeBusyStatus.
     /// </summary>
-    [JsonConverter(typeof(EnumConverter))]
+    [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum FreeBusyStatus
     {
     
+        /// <summary>
+        /// Unknown
+        /// </summary>
+        Unknown = -1,
+	
         /// <summary>
         /// Free
         /// </summary>
@@ -28,11 +33,6 @@ namespace Microsoft.Graph
         /// Tentative
         /// </summary>
         Tentative = 1,
-	
-        /// <summary>
-        /// Unknown
-        /// </summary>
-        Unknown = -1,
 	
         /// <summary>
         /// Busy

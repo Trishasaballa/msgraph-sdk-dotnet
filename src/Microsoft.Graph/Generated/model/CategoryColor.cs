@@ -10,15 +10,20 @@
 
 namespace Microsoft.Graph
 {
-    using Newtonsoft.Json;
+    using System.Text.Json.Serialization;
 
     /// <summary>
     /// The enum CategoryColor.
     /// </summary>
-    [JsonConverter(typeof(EnumConverter))]
+    [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum CategoryColor
     {
     
+        /// <summary>
+        /// None
+        /// </summary>
+        None = -1,
+	
         /// <summary>
         /// Preset0
         /// </summary>
@@ -28,11 +33,6 @@ namespace Microsoft.Graph
         /// Preset1
         /// </summary>
         Preset1 = 1,
-	
-        /// <summary>
-        /// None
-        /// </summary>
-        None = -1,
 	
         /// <summary>
         /// Preset2

@@ -10,15 +10,20 @@
 
 namespace Microsoft.Graph
 {
-    using Newtonsoft.Json;
+    using System.Text.Json.Serialization;
 
     /// <summary>
     /// The enum OnenoteUserRole.
     /// </summary>
-    [JsonConverter(typeof(EnumConverter))]
+    [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum OnenoteUserRole
     {
     
+        /// <summary>
+        /// None
+        /// </summary>
+        None = -1,
+	
         /// <summary>
         /// Owner
         /// </summary>
@@ -28,11 +33,6 @@ namespace Microsoft.Graph
         /// Contributor
         /// </summary>
         Contributor = 1,
-	
-        /// <summary>
-        /// None
-        /// </summary>
-        None = -1,
 	
         /// <summary>
         /// Reader
