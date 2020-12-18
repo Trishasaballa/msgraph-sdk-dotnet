@@ -10,35 +10,15 @@
 
 namespace Microsoft.Graph
 {
-    using Newtonsoft.Json;
+    using System.Text.Json.Serialization;
 
     /// <summary>
     /// The enum IosUpdatesInstallStatus.
     /// </summary>
-    [JsonConverter(typeof(EnumConverter))]
+    [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum IosUpdatesInstallStatus
     {
     
-        /// <summary>
-        /// Success
-        /// </summary>
-        Success = 0,
-	
-        /// <summary>
-        /// Available
-        /// </summary>
-        Available = 1,
-	
-        /// <summary>
-        /// Idle
-        /// </summary>
-        Idle = 2,
-	
-        /// <summary>
-        /// Unknown
-        /// </summary>
-        Unknown = 3,
-	
         /// <summary>
         /// Device Os Higher Than Desired Os Version
         /// </summary>
@@ -108,6 +88,26 @@ namespace Microsoft.Graph
         /// Downloading
         /// </summary>
         Downloading = -2016330712,
+	
+        /// <summary>
+        /// Success
+        /// </summary>
+        Success = 0,
+	
+        /// <summary>
+        /// Available
+        /// </summary>
+        Available = 1,
+	
+        /// <summary>
+        /// Idle
+        /// </summary>
+        Idle = 2,
+	
+        /// <summary>
+        /// Unknown
+        /// </summary>
+        Unknown = 3,
 	
     }
 }

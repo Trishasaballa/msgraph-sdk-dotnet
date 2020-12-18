@@ -10,15 +10,20 @@
 
 namespace Microsoft.Graph
 {
-    using Newtonsoft.Json;
+    using System.Text.Json.Serialization;
 
     /// <summary>
     /// The enum SecurityNetworkProtocol.
     /// </summary>
-    [JsonConverter(typeof(EnumConverter))]
+    [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum SecurityNetworkProtocol
     {
     
+        /// <summary>
+        /// Unknown
+        /// </summary>
+        Unknown = -1,
+	
         /// <summary>
         /// Ip
         /// </summary>
@@ -28,11 +33,6 @@ namespace Microsoft.Graph
         /// Icmp
         /// </summary>
         Icmp = 1,
-	
-        /// <summary>
-        /// Unknown
-        /// </summary>
-        Unknown = -1,
 	
         /// <summary>
         /// Igmp

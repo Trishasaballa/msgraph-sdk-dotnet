@@ -10,15 +10,20 @@
 
 namespace Microsoft.Graph
 {
-    using Newtonsoft.Json;
+    using System.Text.Json.Serialization;
 
     /// <summary>
     /// The enum CalendarColor.
     /// </summary>
-    [JsonConverter(typeof(EnumConverter))]
+    [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum CalendarColor
     {
     
+        /// <summary>
+        /// Auto
+        /// </summary>
+        Auto = -1,
+	
         /// <summary>
         /// Light Blue
         /// </summary>
@@ -28,11 +33,6 @@ namespace Microsoft.Graph
         /// Light Green
         /// </summary>
         LightGreen = 1,
-	
-        /// <summary>
-        /// Auto
-        /// </summary>
-        Auto = -1,
 	
         /// <summary>
         /// Light Orange
