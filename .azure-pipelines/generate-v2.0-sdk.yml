@@ -126,7 +126,7 @@ steps:
       $outputPath = Join-Path $env:Build_SourcesDirectory "output"
       Write-Host "Path to typewriter.exe output $outputPath"
 
-      $typewriterPath = (Join-Path (Join-Path $env:Build_SourcesDirectory\MSGraph-SDK-Code-Generator\src\Typewriter\bin\ $env:BuildConfiguration) Typewriter.exe)
+      $typewriterPath = (Join-Path (Join-Path $env:Build_SourcesDirectory\MSGraph-SDK-Code-Generator\src\Typewriter\bin\ $env:BuildConfiguration) net5.0\Typewriter.exe)
       Write-Host "Path to typewriter tool: $typewriterPath"
 
       # run Typewriter
