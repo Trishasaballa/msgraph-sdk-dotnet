@@ -131,7 +131,7 @@ steps:
 
       # run Typewriter
       Write-Host "Running Typewriter..."
-      & $typewriterPath -v Info -m $(cleanMetadata) -o $(outputPath) -g Files
+      & $typewriterPath -v Info -m $(cleanMetadata) -o $(outputPath) -g Files -l CSharp -e v1.0
 
 - task: PowerShell@2
   displayName: 'Copy generated files into the repo'
